@@ -1,0 +1,20 @@
+workflows:
+  tellestory-ios-compilacion-gratuita:
+    name: TelleStory - comprobar compilacion iOS sin firma
+    instance_type: mac_mini_m2
+    max_build_duration: 30
+    environment:
+      xcode: latest
+    scripts:
+      - name: Compilar TelleStory para simulador, sin firma
+        script: |
+          xcodebuild build \
+            -project TelleStory.xcodeproj \
+            -scheme TelleStory \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO
+    artifacts:
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/Products/Debug-iphonesimulator/TelleStory.app
+      - /tmp/xcodebuild_logs/*.log

@@ -1,0 +1,15 @@
+TelleStory iOS - preparar Xcode y probar Codemagic GRATIS
+
+1. En tu Mac descomprime este ZIP.
+2. Abre TelleStory.xcodeproj en Xcode 15.2.
+3. Selecciona un simulador de iPhone compatible y prueba Build/Run. No conectes tu iPhone con iOS 26.6 a Xcode 15.2; no es una combinacion soportada oficialmente.
+4. Para verificar compilacion moderna GRATIS en Codemagic: crea cuenta personal gratuita en github.com y repositorio privado, por ejemplo tellestory-ios.
+5. En GitHub sube EL CONTENIDO de esta carpeta a la raiz del repositorio; no subas solo el ZIP ni subas la carpeta contenedora.
+6. Visita https://codemagic.io , crea cuenta personal Free, conecta tu repositorio GitHub.
+7. Añade la app y selecciona codemagic.yaml / TelleStory - comprobar compilacion iOS sin firma.
+8. Comprueba que la maquina sea Mac mini M2 y no hayas habilitado facturacion. Ejecuta Start new build.
+9. El resultado prueba compilacion para simulador; NO es instalable en iPhone fisico sin firma.
+
+FIRMA: La firma para instalacion real en el iPhone iOS 26.6 no queda resuelta con esta prueba gratis. Codemagic exige credenciales Apple Developer Program para su flujo de firmado oficial. No contrates ni pagues nada sin revisar el resultado de la compilacion.
+
+No se ha compilado en este entorno, porque aqui no hay macOS ni Xcode.
